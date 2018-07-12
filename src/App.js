@@ -122,7 +122,19 @@ class App extends Component {
 
 // console.log(c);
 
+//What does obj.getX() output? What should you change to get the desired result?
+const obj = {
+  x:1,
+  getX(){
+    //another answer "const that = this" then pass in that as a parameter
+    const inner = function(){  //the answer is to make this fat arrow notation so that this object is passed down ()=>{}
+      console.log(this.x);
+    }
+    inner();//another answer is to do "inner.bind(this)()" and pass in the this object
+  }
+};
 
+obj.getX(); 
 
 
 
