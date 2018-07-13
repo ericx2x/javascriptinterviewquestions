@@ -123,20 +123,48 @@ class App extends Component {
 // console.log(c);
 
 //What does obj.getX() output? What should you change to get the desired result?
-const obj = {
-  x:1,
-  getX(){
-    //another answer "const that = this" then pass in that as a parameter
-    const inner = function(){  //the answer is to make this fat arrow notation so that this object is passed down ()=>{}
-      console.log(this.x);
-    }
-    inner();//another answer is to do "inner.bind(this)()" and pass in the this object
-  }
-};
+// const obj = {
+//   x:1,
+//   getX(){
+//     //another answer "const that = this" then pass in that as a parameter
+//     const inner = function(){  //the answer is to make this fat arrow notation so that this object is passed down ()=>{}
+//       console.log(this.x);
+//     }
+//     inner();//another answer is to do "inner.bind(this)()" and pass in the this object
+//   }
+// };
 
-obj.getX(); 
+// obj.getX();
+
+// function Person(name) {
+//   this.name = name;
+//   this.greeting = function() {
+//     console.log('Hi! I\'m ' + this.name + '.');
+//   };
+// }
+
+// var salva = new Person('Salva');
+// salva.name = "Bob";
+// salva.greeting();
 
 
+// var person1 = new Object({
+//   name: 'Chris',
+//   age: 38,
+//   greeting: function() {
+//     console.log('Hi! I\'m ' + this.name + '.');
+//   }
+// });
+
+// var person2 = Object.create(person1);
+// person2["name"] = "Tony";
+// person1.greeting();
+// person2.greeting();
+// console.log(person2.name);
+
+
+var testObj = new Object;
+console.log(Object.getPrototypeOf(testObj));
 
 
 
@@ -156,22 +184,22 @@ obj.getX();
 // var resultadd = add(2,5);
 // console.log("addition is:" + resultadd);
 
-function resolveAfter2Seconds() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('resolved');
-    }, 2000);
-  });
-}
+// function resolveAfter2Seconds() {
+//   return new Promise(resolve => {
+//     setTimeout(() => {
+//       resolve('resolved');
+//     }, 2000);
+//   });
+// }
 
-async function asyncCall() {
-  console.log('calling');
-  var result = await resolveAfter2Seconds();
-  console.log(result);
-  // expected output: "resolved"
-}
+// async function asyncCall() {
+//   console.log('calling');
+//   var result = await resolveAfter2Seconds();
+//   console.log(result);
+//   // expected output: "resolved"
+// }
 
-asyncCall();
+// asyncCall();
 
 
 
