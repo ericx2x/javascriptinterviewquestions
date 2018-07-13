@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { prototype } from 'events';
+//import { prototype } from 'events';
 
 class App extends Component {
   render() {
@@ -163,10 +163,25 @@ class App extends Component {
 // console.log(person2.name);
 
 
-var testObj = new Object;
-console.log(Object.getPrototypeOf(testObj));
+// var testObj = new Object;
+// console.log(Object.getPrototypeOf(testObj));
+// console.log(testObj.__proto__);
+// console.log(Object.getPrototypeOf(new Object()));
+// console.log(Object.prototype);
 
+function Person(first, last, age, gender, interests) {
+  
+  // property and method definitions
+  this.first = first;
+  this.last = last;
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
 
+}
+
+var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+console.log(person1.valueOf(2));
 
 
 
