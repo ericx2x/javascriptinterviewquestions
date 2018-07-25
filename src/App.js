@@ -184,7 +184,7 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 console.log(person1.valueOf(2));
 
 
-
+ 
 //==============================================================================
 
 
