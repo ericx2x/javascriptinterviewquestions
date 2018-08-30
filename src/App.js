@@ -12,7 +12,7 @@ class App extends Component {
           <h1 className="App-title">ES6 Javascript Problems</h1>
         </header>
         <p className="App-intro">
-          Checkout the code and console to see problems listed.
+          Checkout the code and console to see interview questions listed.
         </p>
       </div>
     );
@@ -169,19 +169,19 @@ class App extends Component {
 // console.log(Object.getPrototypeOf(new Object()));
 // console.log(Object.prototype);
 
-function Person(first, last, age, gender, interests) {
-  
-  // property and method definitions
-  this.first = first;
-  this.last = last;
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
-
-}
-
-var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
-console.log(person1.valueOf(2));
+//function Person(first, last, age, gender, interests) {
+//  
+//  // property and method definitions
+//  this.first = first;
+//  this.last = last;
+//  this.age = age;
+//  this.gender = gender;
+//  this.interests = interests;
+//
+//}
+//
+//var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+//console.log(person1.valueOf(2));
 
 
  
@@ -215,7 +215,63 @@ console.log(person1.valueOf(2));
 // }
 
 // asyncCall();
- 
 
+
+
+
+//New questions from: https://www.youtube.com/watch?v=E06YfXKVtGI
+//============================================================
+//add the array below with your own code.
+//let ary = [1,2,5,7];
+//const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//
+//console.log(ary.reduce(reducer));
+ 
+//============================================================
+//add(1,2);
+//add(1)(2);
+//
+//
+//function add(num1, num2){
+//    if(num1 && num2){
+//        return num1+num2;
+//    } else {
+//        return function(num3){
+//            return num1 + num3;
+//        }
+//    }
+//}
+
+//console.log(add(1)(2));
+
+
+//==========================================
+//const arr = [1,2,3,4,5,6,7,9,10]; // 1 number is missing
+//
+//
+//
+//function missingNum(arr){
+//    function bubbleSort(arr){
+//       var len = arr.length;
+//       for (var i = len-1; i>=0; i--){
+//         for(var j = 1; j<=i; j++){
+//           if(arr[j-1]>arr[j]){
+//               var temp = arr[j-1];
+//               arr[j-1] = arr[j];
+//               arr[j] = temp;
+//            }
+//         }
+//       }
+//       return arr;
+//    }
+//    var sortedArr = bubbleSort(arr);
+//    for(let i = 0; i < sortedArr.length ; i++ ){
+//        if(sortedArr[i]+1 !== sortedArr[i+1]){ 
+//            return sortedArr[i]+1;
+//        }
+//    }
+//}
+//
+//console.log(missingNum(arr));
 
 export default App;
